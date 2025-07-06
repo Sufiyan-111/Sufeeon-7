@@ -1,0 +1,22 @@
+/* style.css */
+
+body, html { margin: 0; padding: 0; height: 100%; font-family: 'Poppins', sans-serif; overflow: hidden; background-color: #000; }
+
+.timer-screen { display: flex; align-items: center; justify-content: center; height: 100vh; font-size: 60px; color: #fff; background-color: #000; z-index: 100; position: fixed; width: 100%; }
+
+.main-screen { display: none; align-items: center; justify-content: center; flex-direction: column; height: 100vh; background: linear-gradient(to top, #87ceeb, #fff); overflow: hidden; position: relative; text-align: center; }
+
+.balloons { position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
+
+.balloon { position: absolute; width: 60px; height: 80px; background: red; border-radius: 50% 50% 45% 45%; animation: float 8s linear infinite; z-index: 0; }
+
+.balloon::after { content: ''; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 2px; height: 20px; background: #555; }
+
+@keyframes float { 0% { bottom: -100px; transform: translateX(0) rotate(0); } 100% { bottom: 100%; transform: translateX(100px) rotate(360deg); } }
+
+h1 { font-size: 48px; color: #e91e63; z-index: 2; }
+
+button { padding: 12px 24px; font-size: 18px; background: #e91e63; color: #fff; border: none; border-radius: 8px; margin-top: 20px; cursor: pointer; z-index: 2; transition: background 0.3s ease; }
+
+button:hover { background: #c2185b; }
+
